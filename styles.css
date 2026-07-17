@@ -1,0 +1,327 @@
+.vc-as-header {
+  padding: 16px 20px;
+}
+
+.vc-as-footer {
+  padding: 14px 20px;
+}
+
+.vc-as-tabbar {
+  padding: 0 20px;
+  border-bottom: 1px solid var(--background-modifier-accent);
+}
+
+.vc-as-tab-item {
+  padding: 12px 4px;
+  margin-right: 24px;
+  font-weight: 600;
+}
+
+.vc-as-modal-content {
+  padding: 18px 20px;
+}
+
+.vc-as-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vc-as-tab-desc {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.vc-as-hint {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--background-tertiary);
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* Panels: raised sections like the reference plugin's grouped cards.
+   Discord's --background-* tiers render too close together on some themes/
+   skins to show contrast, so darken with a flat black overlay instead -
+   this always darkens relative to whatever's behind it, regardless of the
+   underlying theme's exact tier colors. */
+.vc-as-panel {
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--background-modifier-accent);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.vc-as-panel-title {
+  margin-bottom: 4px;
+}
+
+/* Same neutral overlay as other panels - keep it grey/black to match
+   Discord's dark theme instead of a colored tint. */
+.vc-as-preview-panel {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.vc-as-preview-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-positive, #23a55a);
+  margin-bottom: 10px;
+}
+
+.vc-as-preview-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  /* Nested one level deeper than the green-tinted preview panel - darken
+     further so the card itself still reads as a distinct surface. */
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.vc-as-preview-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.vc-as-preview-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+}
+
+.vc-as-preview-dot {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #23a55a;
+  border: 3px solid var(--background-tertiary);
+}
+
+.vc-as-preview-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.vc-as-preview-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vc-as-preview-emoji {
+  width: 16px;
+  height: 16px;
+}
+
+.vc-as-preview-emoji-text {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.vc-as-preview-text {
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vc-as-preview-placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Lists / rows */
+.vc-as-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vc-as-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vc-as-row-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.vc-as-row-card:hover {
+  border-color: var(--background-modifier-accent);
+}
+
+.vc-as-row-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.vc-as-row-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Discord's real Select component - already themed, just constrain width */
+.vc-as-preset-select {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.vc-as-active-tag {
+  color: var(--text-positive);
+  font-size: 12px;
+}
+
+.vc-as-preset-create {
+  margin-top: 8px;
+}
+
+.vc-as-emoji-chip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 24px;
+  height: 24px;
+}
+
+.vc-as-emoji-chip-img {
+  width: 24px;
+  height: 24px;
+}
+
+.vc-as-emoji-chip-text {
+  min-width: 32px;
+  padding: 0 4px;
+  font-size: 16px;
+}
+
+.vc-as-emoji-chip-remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--background-floating, #111214);
+  color: var(--text-danger, #f23f43);
+  font-size: 11px;
+  line-height: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.vc-as-input-wrapper {
+  flex: 2;
+  min-width: 0;
+}
+
+.vc-as-emoji-input-wrapper {
+  flex: 1;
+  min-width: 0;
+  max-width: 180px;
+}
+
+/* Circular icon delete button, matches the reference's compact row actions */
+.vc-as-icon-delete {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: var(--button-danger-background, #da373c);
+  color: #fff;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.vc-as-icon-delete:hover {
+  filter: brightness(1.1);
+}
+
+/* Slider with tick marks and end labels */
+.vc-as-slider-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.vc-as-slider-endlabels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+}
+
+.vc-as-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vc-as-slider-track-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.vc-as-slider {
+  width: 100%;
+  accent-color: var(--brand-experiment, #5865f2);
+}
+
+.vc-as-slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+
+.vc-as-tick {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.vc-as-slider-value-box {
+  flex-shrink: 0;
+  min-width: 46px;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid var(--background-modifier-accent);
+  color: var(--header-primary, #fff);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.vc-as-switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
