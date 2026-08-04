@@ -182,7 +182,7 @@ function animationLoop(i = 0) {
 export default definePlugin({
     name: "AnimatedStatus",
     description: "Cycles your custom status through a list of text/emoji steps on a timer.",
-    authors: [{ name: "isnuggs", id: 0n }],
+    authors: [{ name: "isnuggs", id: 1483261914392825958n }],
     dependencies: ["UserSettingsAPI"],
     settings,
 
