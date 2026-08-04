@@ -18,6 +18,31 @@ at build time, so there's no drop-in installer. To use this plugin:
 3. Enable the `UserSettingsAPI` plugin (Vencord Settings → Plugins) — AnimatedStatus depends on it.
 4. `pnpm build`, then inject/reinject as usual.
 
+## Usage
+
+Go to **Vencord Settings → Plugins → AnimatedStatus** and click **Edit Statuses**. That opens the editor,
+which has three tabs.
+
+**Statuses**
+
+Your list of steps. Each step is a line of status text plus an optional emoji, and the plugin rotates
+through them on a timer. The emoji field accepts either:
+
+- a custom server emoji in markdown form — `<:name:id>` — which resolves to the real CDN image, or
+- a plain Unicode emoji typed or pasted directly (e.g. `🎮`).
+
+**Presets**
+
+Group steps into named presets — for example a gaming set and a working set. Marking a preset **active**
+means only that preset's steps cycle; leave it unset to cycle through everything. The plugin settings page
+shows which is live, e.g. `4/12 steps active (preset: gaming)`.
+
+**Settings**
+
+- **Step duration** — how long each status stays up, in milliseconds. The minimum is 10,000ms (10 seconds);
+  Discord rate-limits status updates and going faster isn't reliable.
+- **Randomize** — shuffle the order instead of cycling top to bottom.
+
 ## Note
 
 Vencord's own contribution guidelines list automated/repeated-status plugins under plugins they won't accept
