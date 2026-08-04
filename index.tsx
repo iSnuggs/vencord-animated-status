@@ -53,12 +53,28 @@ const settings = definePluginSettings({
                 ? `${count}/${total} steps active (preset: ${settings.store.activePreset})`
                 : `${total} step${total === 1 ? "" : "s"} configured`;
 
+            // Fewer than two active steps means the status never advances. Without this the
+            // plugin is indistinguishable from a broken one - it just sits on one status.
+            const stalled = count < 2;
+
             return (
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                    <Button size={Button.Sizes.SMALL} onClick={() => openStatusEditor(getEditorData(), saveEditorData)}>
-                        Edit Statuses
-                    </Button>
-                    <Text variant="text-sm/normal">{summary}</Text>
+                <div className="vc-as-settings-summary">
+                    <div className="vc-as-settings-row">
+                        <Button size={Button.Sizes.SMALL} onClick={() => openStatusEditor(getEditorData(), saveEditorData)}>
+                            Edit Statuses
+                        </Button>
+                        <Text variant="text-sm/normal">{summary}</Text>
+                    </div>
+                    {stalled && (
+                        <Text variant="text-sm/normal" className="vc-as-preset-warning">
+                            {count === 0
+                                ? "Nothing is set to cycle, so your status won't be changed."
+                                : "Only one status is active, so it won't change."}
+                            {settings.store.activePreset
+                                ? ` The "${settings.store.activePreset}" preset is limiting what cycles — open the editor's Presets tab to add more, or switch to "All Statuses".`
+                                : " Add more statuses in the editor."}
+                        </Text>
+                    )}
                 </div>
             );
         }

@@ -293,6 +293,8 @@ function PresetsTab({ presets, setPresets, steps, setSteps, activePreset, setAct
 }) {
     const [newName, setNewName] = useState("");
 
+    const activePresetCount = activePreset ? steps.filter(s => s.preset === activePreset).length : 0;
+
     const createPreset = () => {
         const name = newName.trim();
         if (!name || presets.some(p => p.name === name)) return;
@@ -329,6 +331,17 @@ function PresetsTab({ presets, setPresets, steps, setSteps, activePreset, setAct
                     Which set of statuses actually cycles. Choose "All Statuses" to ignore presets entirely.
                 </Text>
                 <PresetSelect value={activePreset} presets={presets} onChange={setActivePreset} noneLabel="All Statuses" />
+                {/* A one-status preset pins the status and never advances, which looks exactly
+                    like the plugin being broken. Say so plainly rather than leaving them to
+                    watch a status that never changes. */}
+                {activePreset && activePresetCount < 2 && (
+                    <Text variant="text-sm/normal" className="vc-as-preset-warning">
+                        {activePresetCount === 0
+                            ? `"${activePreset}" has no statuses in it, so nothing will be shown.`
+                            : `"${activePreset}" only has one status in it, so your status won't change.`}
+                        {" "}Add more statuses to this preset, or choose "All Statuses" to cycle through everything.
+                    </Text>
+                )}
             </Panel>
 
             <div className="vc-as-list">

@@ -325,3 +325,26 @@
   align-items: center;
   justify-content: space-between;
 }
+
+/* Shown when the active preset has fewer than two statuses - the status then
+   never advances, which is easy to mistake for the plugin being broken. */
+.vc-as-preset-warning {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border-left: 3px solid var(--status-warning, #f0b232);
+  background: rgba(240, 178, 50, 0.1);
+  color: var(--text-warning, var(--header-secondary, #b9bbbe));
+  line-height: 1.4;
+}
+
+.vc-as-settings-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.vc-as-settings-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
