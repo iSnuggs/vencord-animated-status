@@ -171,3 +171,11 @@ shows which is live, e.g. `4/12 steps active (preset: gaming)`.
 Vencord's own contribution guidelines list automated/repeated-status plugins under plugins they won't accept
 into the main project (grouped with API-spam style plugins). This repo exists purely as a personal userplugin
 for anyone who wants to build it into their own client — it is not, and will not be, submitted upstream.
+
+## License
+
+Released under the **GNU General Public License v3.0 or later** — see [LICENSE](LICENSE).
+
+Vencord itself is GPL-3.0-or-later, and a userplugin is compiled into a Vencord build, so this
+plugin is distributed under the same terms. In plain terms: you may use, modify and redistribute
+it freely, provided anything you share onward stays under the GPL and keeps this notice.
