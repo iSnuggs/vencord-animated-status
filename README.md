@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <img src="assets/logo-light.svg" alt="isnuggs" height="128">
+  </picture>
+</p>
+
 # AnimatedStatus
 
 A [Vencord](https://github.com/Vendicated/Vencord) userplugin that cycles your custom status through a
@@ -216,3 +223,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+The logo in `assets/` is a project mark rather than part of the licensed source, and is
+excluded from the GPL grant — please do not reuse it to identify your own project.
