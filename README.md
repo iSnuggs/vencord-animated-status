@@ -179,3 +179,40 @@ Released under the **GNU General Public License v3.0 or later** — see [LICENSE
 Vencord itself is GPL-3.0-or-later, and a userplugin is compiled into a Vencord build, so this
 plugin is distributed under the same terms. In plain terms: you may use, modify and redistribute
 it freely, provided anything you share onward stays under the GPL and keeps this notice.
+
+### Credit where it's due
+
+This plugin began as a port of the **AnimatedStatus** BetterDiscord plugin by **toluschr** and
+**SirSlender** ([toluschr/BetterDiscord-Animated-Status](https://github.com/toluschr/BetterDiscord-Animated-Status)),
+which is released under the MIT licence. The status-cycling loop here — including the randomised
+step selection and the 10-second minimum interval — derives from theirs.
+
+The status editor (Statuses / Presets / Settings tabs), the preset system, and the move to
+Vencord's protobuf-backed `UserSettingsAPI` instead of the legacy REST endpoint are additions.
+
+The MIT licence permits redistribution under these terms provided its notice is preserved, so it
+is reproduced here in full:
+
+```
+MIT License
+
+Copyright (c) toluschr
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```

@@ -1,3 +1,10 @@
+/*
+ * Derived from the AnimatedStatus BetterDiscord plugin by toluschr and SirSlender
+ * (https://github.com/toluschr/BetterDiscord-Animated-Status), MIT licensed.
+ * The cycling loop below, the randomised step selection and the 10s minimum
+ * interval come from that plugin. Full MIT notice is in the README.
+ */
+
 import "./styles.css";
 
 import definePlugin, { OptionType } from "@utils/types";
